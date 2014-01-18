@@ -1,0 +1,14 @@
+<h1>41 Blog</h1>
+<p>Just Blogging Platform</p>
+<p>
+<% if user_signed_in? %>
+  <%= link_to "Manage posts", posts_path %>
+  <%= link_to "Manage profile", profiles_path %>
+  <%= link_to "Sign out", sign_out_path, method: :delete %>
+<% else %>
+  <%= link_to "Sign In", sign_in_path %>
+  <%= link_to "Sign Up", sign_up_path %>
+<% end %>
+</p>
+
+
